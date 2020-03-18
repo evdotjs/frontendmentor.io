@@ -1,15 +1,15 @@
 html {
-  margin: auto;
   min-width: 300px;
 }
 
 body {
-  max-width: 600px;
+  display: grid;
+  grid-auto-rows: repeat(3, 1fr);
   background-color: #fafafa;
   color: #4c4e61;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  padding: 0 2em;
+  width: 80%;
   margin: auto;
 }
 body p {
@@ -27,11 +27,37 @@ header h2 {
 header h2:first-child {
   font-weight: 200;
 }
+@media screen and (min-width: 992px) {
+  header {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2em 0;
+  }
+}
+
+main {
+  display: grid;
+}
+@media screen and (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 
 .card {
   text-align: left;
   border-radius: 5px;
-  margin: auto;
   margin-bottom: 2em;
   padding: 1em 2em;
   box-shadow: 0 8px 18px 0 #dbe5f0;
