@@ -13,11 +13,12 @@ body {
   p {
     color: hsl(229, 6%, 66%);
     line-height: 1.75em;
+    font-size: .9em;
   }
 }
 
 header {
-  padding: 5em 0;
+  padding: 4em 0;
   h2 {
     margin: .5em 0;
   }
@@ -32,14 +33,35 @@ header {
   margin: auto;
   margin-bottom: 2em;
   padding: 1em 2em;
-  box-shadow: 0 5px 10px 0 hsl(212, 12%, 74%) ;
-  min-height: 200px;
+  box-shadow: 0 8px 18px 0 hsl(212, 40%, 90%) ;
+  min-height: 180px;
+  background-repeat: no-repeat;
+  background-position: 90% 90%;
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: .8em;
+    margin-top: .5em;
+  }
 }
 
-#supervisor { border-top: 5px solid hsl(180, 62%, 55%); }
-#team-builder { border-top: 5px solid hsl(0, 78%, 62%); }
-#karma { border-top: 5px solid hsl(34, 97%, 64%); }
-#calculator { border-top: 5px solid hsl(212, 86%, 64%); }
+#supervisor {
+  border-top: 5px solid hsl(180, 62%, 55%);
+  background-image: url('../images/icon-supervisor.svg');
+}
+#team-builder {
+  border-top: 5px solid hsl(0, 78%, 62%);
+  background-image: url('../images/icon-team-builder.svg');
+}
+#karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+  background-image: url('../images/icon-karma.svg');
+}
+#calculator {
+  border-top: 5px solid hsl(212, 86%, 64%);
+  background-image: url('../images/icon-calculator.svg');
+}
 
 .attribution {
   font-size: 11px;
