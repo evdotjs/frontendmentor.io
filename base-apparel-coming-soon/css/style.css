@@ -1,33 +1,43 @@
 * { box-sizing: border-box;}
+
 html {
   height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  background-color: #fff;
 }
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   height: 100%;
   background-color: white;
   max-width: 375px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 10%, rgba(206,151,151,0.2) 100%);
 }
-header {
+
+header #logo {
   padding: 2em;
+  width: 50%;
+  max-width: 200px;
 }
 
 h1 {
   text-transform: uppercase;
   color:  hsl(0, 36%, 70%);
   letter-spacing: .3em;
-  width: 50%;
   margin: auto;
   padding-top: 10%;
   font-weight: 300;
+  font-size: 2.5em;
 }
 
 h1 strong {
   color: #000;
   font-weight: 600;
 }
+
 main .content {
   color: hsl(0, 36%, 70%);
   width: 85%;
@@ -35,23 +45,33 @@ main .content {
   text-align: center;
 }
 
-main img {
-  width: 100%;
+main p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  font-weight: 600;
 }
 
 input {
+  margin-top: 1em;
   padding: 1em 2em;
   border-radius: 50px;
   border: 1px solid hsl(0, 36%, 70%);
   width: 100%;
+  background-color: rgba(0,0,0,0);
 }
 
 ::placeholder { color: hsl(0, 36%, 70%); }
 
+footer {
+  flex: 1;
+  display: grid;
+}
+
 .attribution {
-  font-size: 11px; text-align: center;
+  font-size: 11px;
   text-align: center;
-  display: none;
+  width: 100%;
+  align-self: end;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
