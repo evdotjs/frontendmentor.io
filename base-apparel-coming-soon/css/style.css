@@ -7,23 +7,36 @@ html {
 body {
   font-family: 'Josefin Sans', sans-serif;
   height: 100%;
+  min-width: 325px;
   max-width: 400px;
   margin: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   background: rgb(255,255,255);
   background: linear-gradient(to bottom, rgba(255,255,255,1) 10%, rgba(206,151,151,0.2) 100%);
   background-attachment: fixed;
+  grid-template-areas: "header"
+                       "img"
+                       "content"
+                       "footer";
+}
+
+header {
+  grid-area: header;
 }
 
 header #logo {
   padding: 2em;
   width: 50%;
-  max-width: 200px;
+  max-width: 250px;
 }
 
-header .img-container img {
+.img-container {
   width: 100%;
+  grid-area: img;
+}
+
+.content-container {
+  grid-area: content;
 }
 
 h1 {
@@ -33,7 +46,7 @@ h1 {
   margin: auto;
   padding-top: 10%;
   font-weight: 300;
-  font-size: 2.5em;
+  font-size: 10vw;
 }
 
 h1 strong {
@@ -76,6 +89,7 @@ button {
   border: none;
   margin-left: -65px;
   flex: 1;
+  box-shadow: 0 2px 3px 1px hsl(0, 36%, 75%);
   transition-property: box-shadow;
   transition-duration: 400ms;
 }
@@ -91,6 +105,7 @@ button:hover {
 footer {
   flex: 1;
   display: grid;
+  grid-area: footer;
 }
 
 .attribution {
@@ -101,4 +116,68 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    min-width: 100%;
+    background: url('../images/bg-pattern-desktop.svg') no-repeat;
+    background-size: cover;
+    grid-auto-rows: 2fr 9fr 1fr;
+    grid-auto-columns: 3fr 2fr;
+    grid-template-areas: " header img"
+                         "content img"
+                         " footer img"
+  }
+
+  header {
+    width: 85%;
+    margin: auto;
+    padding: 0 7vw;
+  }
+
+  header #logo {
+    padding: 0;
+    width: 33%;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  h1 {
+    padding-top: 5vh;
+    font-size: 4vw;
+  }
+
+  .content-container {
+    align-self: center;
+  }
+
+  .img-container {
+    background: url('../images/hero-desktop.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .img-container img {
+    opacity: 0;
+  }
+
+  main .content {
+    text-align: left;
+    padding: 0 7vw;
+  }
+
+  main p {
+    font-size: 1em;
+    line-height: 2em;
+  }
+
+  main p,
+  #email-submit {
+    width: 80%;
+    margin-left: 0;
+  }
+
 }
