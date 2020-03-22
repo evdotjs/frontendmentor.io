@@ -37,7 +37,7 @@ h1 {
 }
 
 h1 strong {
-  color: #000;
+  color: hsl(0, 6%, 24%);
   font-weight: 600;
 }
 
@@ -54,13 +54,36 @@ main p {
   font-weight: 600;
 }
 
+#email-submit {
+  display: flex;
+  margin: 2em auto;
+}
+
 input {
-  margin: 1em auto;
   padding: 1em 2em;
   border-radius: 50px;
   border: 1px solid hsl(0, 36%, 70%);
   width: 100%;
   background-color: rgba(0,0,0,0);
+  flex: 10;
+}
+
+button {
+  background: url('../images/icon-arrow.svg') center no-repeat,
+  linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+  padding: 0 2em;
+  border-radius: 50px;
+  border: none;
+  margin-left: -65px;
+  flex: 1;
+  transition-property: box-shadow;
+  transition-duration: 400ms;
+}
+
+button:hover {
+  background: url('../images/icon-arrow.svg') center no-repeat,
+  hsl(0, 80%, 86%);
+  box-shadow: 0 3px 15px 1px hsl(0, 36%, 75%);
 }
 
 ::placeholder { color: hsl(0, 36%, 70%); }
