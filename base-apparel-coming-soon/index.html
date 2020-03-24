@@ -16,7 +16,7 @@
   <header class="hero">
     <img id="logo" src="images/logo.svg" alt="base apparel logo">
   </header>
-  <section class="img-container"></section>
+  <div class="img-container"></div>
   <main>
     <section class="content-container">
       <div class="content">
@@ -24,10 +24,13 @@
 
         <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-        <div id="email-submit">
-          <input type="text" placeholder="Email Address">
-          <button></button>
-        </div>
+        <form id="email-submit">
+          <input type="email" aria-label="email" placeholder="Email Address" v-model="email">
+          <div v-show="!valid" id="icon-error"></div>
+          <button aria-label="submit" type="submit" v-on:click="isValid"></button>
+        </form>
+        <p v-if="valid">.</p>
+        <p v-else id="invalid-email">Please provide a valid email</p>
       </div>
     </section>
   </main>
@@ -38,5 +41,8 @@
       Coded by <a href="https://github.com/evdotjs">Ev McNeal</a>.
     </p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
