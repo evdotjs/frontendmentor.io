@@ -93,9 +93,10 @@ main p {
 
 input {
   padding: 1em 1em 1em 1.5em;
+  padding: 1em 0.5em 1em 1.5em;
   border: none;
   background-color: rgba(0,0,0,0);
-  flex: 10;
+  width: 65%;
 }
 
 input:invalid {
@@ -150,6 +151,37 @@ footer {
   color: hsl(228, 45%, 44%);
 }
 
+@media screen and (min-width: 600px) {
+
+  body {
+    grid-auto-rows: 1fr 5fr 5fr 1fr;
+    grid-template-areas: "header"
+                         "img"
+                         "content"
+                         "footer";
+  }
+
+  h1 {
+    font-size: 7vw;
+  }
+
+  .img-container {
+    background: url('../images/hero-desktop.jpg') no-repeat;
+    background-size: cover;
+    background-position: 0 15%;
+  }
+
+  main .content {
+    width: 60%;
+    align-self: center;
+  }
+
+  input {
+    flex: 10;
+  }
+}
+
+
 @media screen and (min-width: 900px) {
   body {
     min-width: 100%;
@@ -161,7 +193,7 @@ footer {
     grid-auto-columns: 3fr 2fr;
     grid-template-areas: " header img"
                          "content img"
-                         " footer img"
+                         " footer img";
   }
 
   header {
@@ -189,14 +221,10 @@ footer {
     align-self: center;
   }
 
-  .img-container {
-    background: url('../images/hero-desktop.jpg') no-repeat;
-    background-size: cover;
-  }
-
   main .content {
     text-align: left;
     padding: 0 7vw;
+    width: 85%;
   }
 
   main p {
