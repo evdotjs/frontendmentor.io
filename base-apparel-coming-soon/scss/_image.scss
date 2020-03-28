@@ -1,0 +1,12 @@
+.img-container {
+  background: url('../images/hero-mobile.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  grid-area: img;
+
+  @media #{$medium-screens} {
+    background: url('../images/hero-desktop.jpg') no-repeat;
+    background-position: 0 15%;
+  }
+
+}

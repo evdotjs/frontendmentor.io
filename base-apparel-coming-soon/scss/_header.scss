@@ -1,0 +1,19 @@
+header {
+  grid-area: header;
+  @media #{$large-screens} {
+      width: 85%;
+      margin: auto;
+      padding: 0 7vw;
+  }
+
+  #logo {
+    padding: 2em;
+    width: 50%;
+    max-width: 250px;
+    @media #{$medium-screens} {
+        padding: 0;
+        width: 33%;
+    }
+  }
+
+}

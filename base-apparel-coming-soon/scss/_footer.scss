@@ -1,0 +1,12 @@
+footer {
+  display: grid;
+  grid-area: footer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  align-self: end;
+  a { color: $footer-links; }
+}

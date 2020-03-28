@@ -4,7 +4,7 @@
 
 ::selection {
   background-color: rgba(206, 151, 151, 0.7);
-  color: #fff;
+  color: white;
 }
 
 html {
@@ -56,7 +56,7 @@ header #logo {
   width: 50%;
   max-width: 250px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 600px) {
   header #logo {
     padding: 0;
     width: 33%;
@@ -72,7 +72,6 @@ header #logo {
 @media screen and (min-width: 600px) {
   .img-container {
     background: url("../images/hero-desktop.jpg") no-repeat;
-    background-size: cover;
     background-position: 0 15%;
   }
 }
@@ -164,7 +163,6 @@ main p {
     margin-left: 0;
   }
 }
-
 #email-submit + p {
   text-align: left;
   margin: 0 0 1em 2em;
@@ -172,7 +170,6 @@ main p {
   color: rgba(255, 0, 0, 0.5);
   opacity: 0;
 }
-
 #email-submit + p#invalid-email {
   opacity: 1;
 }
@@ -181,17 +178,19 @@ input {
   padding: 1em 1em 1em 1.5em;
   padding: 1em 0.5em 1em 1.5em;
   border: none;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   width: 65%;
   flex: 10;
 }
-
 input:invalid {
   box-shadow: none;
 }
-
 input:focus {
   outline: none;
+}
+
+::placeholder {
+  color: #ce9797;
 }
 
 #icon-error {
@@ -213,14 +212,9 @@ button {
   transition-property: box-shadow;
   transition-duration: 400ms;
 }
-
 button:hover {
   background: url("../images/icon-arrow.svg") center no-repeat, #f8bfbf;
   box-shadow: 0 3px 15px 1px #d6a8a8;
-}
-
-::placeholder {
-  color: #ce9797;
 }
 
 footer {
@@ -234,7 +228,6 @@ footer {
   width: 100%;
   align-self: end;
 }
-
 .attribution a {
   color: #3e52a3;
 }
