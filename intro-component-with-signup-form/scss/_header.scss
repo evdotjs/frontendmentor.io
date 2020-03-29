@@ -1,0 +1,12 @@
+header {
+  @extend %text-properties;
+  margin: 5em auto 2em;
+  h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.5em;
+ }
+  p {
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,91 @@
+main, header {
+  color: white;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  max-width: 375px;
+  margin: auto;
+  background-color: #ff7a7a;
+}
+
+.content {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+header {
+  margin: 5em auto 2em;
+}
+header h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+header p {
+  font-weight: 500;
+}
+
+main #try {
+  background-color: #6055a5;
+  padding: 1.5em 3em;
+  border-radius: 10px;
+}
+
+form {
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+}
+form p {
+  color: #b9b6d3;
+  font-size: 0.75em;
+}
+form a {
+  color: #ff7a7a;
+}
+form input {
+  border: 1px solid #d7d6e6;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+form button[type=submit] {
+  width: 100%;
+  border: none;
+  background-color: #38cc8c;
+  box-shadow: 0 4px 0 0 #30bb7f;
+  padding: 1em;
+  color: white;
+  border-radius: 5px;
+}
+form button[type=submit]:hover {
+  background-color: #61d6a3;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */

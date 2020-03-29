@@ -1,0 +1,23 @@
+* {box-sizing: border-box;}
+
+html {
+  background-color: rgba(0,0,0,0.7);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: 375px;
+  margin: auto;
+  background-color: $red;
+}
+
+.content {
+  width: 85%;
+  margin: auto;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+p {
+  line-height: 1.5em;
+}

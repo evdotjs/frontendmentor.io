@@ -1,0 +1,43 @@
+main {
+  @extend %text-properties;
+  #try {
+    // font-weight: 400;
+    background-color: $blue;
+    padding: 1.5em 3em;
+    border-radius: 10px;
+  }
+}
+
+form {
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  p {
+    color: $grayish-blue;
+    font-size: .75em;
+  }
+  a {
+    color: $red;
+  }
+  input {
+    border: 1px solid lighten($grayish-blue, 10%);
+    border-radius: 5px;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  button[type='submit'] {
+    width: 100%;
+    border: none;
+    background-color: $green;
+    box-shadow: 0 4px 0 0 darken($green, 5%);
+    padding: 1em;
+    color: white;
+    border-radius: 5px;
+    &:hover {
+      background-color: lighten($green, 10%);
+      cursor: pointer;
+    }
+  }
+
+}
