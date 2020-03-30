@@ -1,10 +1,10 @@
 main {
   @extend %text-properties;
   #try {
-    // font-weight: 400;
     background-color: $blue;
-    padding: 1.5em 3em;
+    padding: 1.25em 2.5em;
     border-radius: 10px;
+    @include box-shadow(rgba(0,0,0,0.15));
   }
 }
 
@@ -12,12 +12,18 @@ form {
   background-color: white;
   padding: 1.5em;
   border-radius: 10px;
+  @include box-shadow(rgba(0,0,0,0.2));
+  margin-bottom: 2em;
   p {
     color: $grayish-blue;
-    font-size: .75em;
+    font-size: .7em;
+    font-weight: 600;
+    padding: 0 2em;
+    line-height: 2em;
   }
   a {
     color: $red;
+    font-weight: 700;
   }
   input {
     border: 1px solid lighten($grayish-blue, 10%);
@@ -30,14 +36,22 @@ form {
     width: 100%;
     border: none;
     background-color: $green;
-    box-shadow: 0 4px 0 0 darken($green, 5%);
-    padding: 1em;
-    color: white;
+    box-shadow: 0 3px 0 1px darken($green, 5%);
+    padding: 1.25em 1em;
+    color: $white;
     border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9em;
+    letter-spacing: .1em;
     &:hover {
       background-color: lighten($green, 10%);
       cursor: pointer;
     }
   }
+}
 
+::placeholder {
+  font-weight: 700;
+  font-size: .85em;
 }

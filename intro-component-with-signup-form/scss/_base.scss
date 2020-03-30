@@ -9,6 +9,9 @@ body {
   max-width: 375px;
   margin: auto;
   background-color: $red;
+  background-image: url('../images/bg-intro-mobile.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .content {
@@ -20,4 +23,9 @@ body {
 
 p {
   line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  &:hover { border-bottom: 1px solid; }
 }
