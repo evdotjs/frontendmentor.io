@@ -14,6 +14,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   max-width: 375px;
+  min-height: 100vh;
   margin: auto;
   background-color: #ff7a7a;
   background-image: url("../images/bg-intro-mobile.png");
@@ -60,12 +61,24 @@ main #try {
 
 form {
   background-color: white;
-  padding: 1.5em;
+  padding: 1em 1.5em;
   border-radius: 10px;
   box-shadow: 0 8px 2px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 2em;
 }
-form p {
+form ::placeholder {
+  font-weight: 700;
+  font-size: 0.85em;
+}
+form .error-message {
+  color: #ff7a7a;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7em;
+  padding: 0.5em;
+  font-weight: 500;
+}
+form #terms {
   color: #b9b6d3;
   font-size: 0.7em;
   font-weight: 600;
@@ -81,7 +94,7 @@ form input {
   border-radius: 5px;
   width: 100%;
   padding: 1em;
-  margin-bottom: 1em;
+  margin: 0.5em 0;
 }
 form button[type=submit] {
   width: 100%;
@@ -95,15 +108,11 @@ form button[type=submit] {
   font-weight: 600;
   font-size: 0.9em;
   letter-spacing: 0.1em;
+  margin: 0.5em 0;
 }
 form button[type=submit]:hover {
   background-color: #61d6a3;
   cursor: pointer;
-}
-
-::placeholder {
-  font-weight: 700;
-  font-size: 0.85em;
 }
 
 .attribution {
