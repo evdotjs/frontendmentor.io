@@ -14,7 +14,7 @@
 - [view in browser](https://evdotjs.github.io/frontendmentor/base-apparel-coming-soon/)
 - [view repository](https://github.com/evdotjs/frontendmentor/tree/gh-pages/base-apparel-coming-soon)
 
-### Base Apparel Coming Soon
+### Intro component with sign up form
 
 ![Design preview for the Intro Component with sign up fform coding challenge](intro-component-with-signup-form/design/desktop-preview.jpg)
 
