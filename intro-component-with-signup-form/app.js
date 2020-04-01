@@ -13,7 +13,6 @@ new Vue({
     },
     methods: {
       findEmptyInputs: function() {
-        // return an array of empty inputs
         const keys = Object.keys(this.inputs);
         keys.forEach( (key) => {
           if (this.inputs[key].trim().length < 1) {
@@ -30,13 +29,9 @@ new Vue({
 
       validate: function() {
         event.preventDefault();
-        this.emptyInputsArray.splice(0, this.emptyInputsArray.length)
+        this.emptyInputsArray.splice(0, this.emptyInputsArray.length);
         this.findEmptyInputs();
         this.checkEmail();
-
-        console.log('all inputs are filled: ', this.emptyInputsArray.length === 0 );
-        console.log('missing inputs: ', this.emptyInputsArray.join(', '));
-        console.log('email is valid: ', this.validEmail, '\n\n');
       },
       
     }

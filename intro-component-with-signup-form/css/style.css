@@ -101,14 +101,6 @@ form {
     margin-bottom: 3em;
   }
 }
-form .error-message {
-  color: #ff7a7a;
-  margin: 0;
-  text-align: right;
-  font-size: 0.7em;
-  padding: 0.5em;
-  font-weight: 500;
-}
 form #terms {
   color: #b9b6d3;
   font-size: 0.7em;
@@ -120,16 +112,37 @@ form a {
   color: #ff7a7a;
   font-weight: 700;
 }
-form input {
+form .input-wrapper {
+  display: flex;
+  flex-direction: row;
   border: 1px solid #d7d6e6;
   border-radius: 5px;
-  width: 100%;
+  margin: 1em 0 0;
+}
+form .input-wrapper:focus-within {
+  border-color: #6055a5;
+}
+form .input-wrapper-error {
+  border: 2px solid #ff7a7a;
+}
+form input {
+  width: 85%;
+  flex-shrink: 1;
+  border: none;
   padding: 1em;
-  margin: 0.5em 0;
+  margin: 0.1em 0;
   font-weight: 600;
 }
+@media screen and (min-width: 600px) {
+  form input {
+    width: 100%;
+  }
+}
 form input:focus {
-  border-color: #6055a5;
+  outline: none;
+}
+form input:invalid {
+  box-shadow: none;
 }
 @media screen and (min-width: 900px) {
   form input {
@@ -139,6 +152,22 @@ form input:focus {
 form ::placeholder {
   font-weight: 700;
   font-size: 0.85em;
+}
+form #error-icon {
+  background-image: url("../images/icon-error.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0.8em;
+  margin-right: 1em;
+}
+form .error-message {
+  color: #ff7a7a;
+  margin: 0;
+  text-align: right;
+  font-size: 0.7em;
+  padding: 0.5em;
+  font-weight: 500;
 }
 form button[type=submit] {
   width: 100%;
@@ -152,10 +181,11 @@ form button[type=submit] {
   font-weight: 600;
   font-size: 0.9em;
   letter-spacing: 0.1em;
-  margin: 0.5em 0;
+  margin: 1em 0 0.5em;
 }
 form button[type=submit]:hover {
-  background-color: #61d6a3;
+  background-color: #75dbaf;
+  box-shadow: 0 3px 0 1px #38cc8c;
   cursor: pointer;
 }
 

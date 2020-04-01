@@ -18,14 +18,6 @@ form {
     margin-bottom: 3em;
   }
   margin-bottom: 2em;
-  .error-message {
-    color: $red;
-    margin: 0;
-    text-align: right;
-    font-size: .7em;
-    padding: 0.5em;
-    font-weight: 500;
-  }
   #terms {
     color: $grayish-blue;
     font-size: .7em;
@@ -37,15 +29,32 @@ form {
     color: $red;
     font-weight: 700;
   }
-  input {
+  .input-wrapper {
+    display: flex;
+    flex-direction: row;
     border: 1px solid lighten($grayish-blue, 10%);
     border-radius: 5px;
-    width: 100%;
-    padding: 1em;
-    margin: 0.5em 0;
-    font-weight: 600;
-    &:focus {
+    margin: 1em 0 0;
+    &:focus-within {
       border-color: $blue;
+    }
+  }
+  .input-wrapper-error {
+    border: 2px solid $red;
+  }
+  input {
+    width: 85%;
+    flex-shrink: 1;
+    border: none;
+    padding: 1em;
+    margin: .1em 0;
+    font-weight: 600;
+    @media #{$medium-screens} {width: 100%;}
+    &:focus {
+      outline: none;
+    }
+    &:invalid {
+      box-shadow: none;
     }
     @media #{$large-screens} {
       padding: 1em 1.5em;
@@ -55,6 +64,22 @@ form {
     font-weight: 700;
     font-size: .85em;
   }  
+  #error-icon {
+    background-image: url('../images/icon-error.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0.8em;
+    margin-right: 1em;
+  }
+  .error-message {
+    color: $red;
+    margin: 0;
+    text-align: right;
+    font-size: .7em;
+    padding: 0.5em;
+    font-weight: 500;
+  }
   button[type='submit'] {
     width: 100%;
     border: none;
@@ -67,9 +92,10 @@ form {
     font-weight: 600;
     font-size: .9em;
     letter-spacing: .1em;
-    margin: 0.5em 0;
+    margin: 1em 0 0.5em;
     &:hover {
-      background-color: lighten($green, 10%);
+      background-color: lighten($green, 15%);
+      box-shadow: 0 3px 0 1px $green;
       cursor: pointer;
     }
   }
