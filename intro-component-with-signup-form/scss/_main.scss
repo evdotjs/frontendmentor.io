@@ -13,11 +13,11 @@ form {
   padding: 1em 1.5em;
   border-radius: 10px;
   @include box-shadow(rgba(0,0,0,0.2));
+  @media #{$large-screens} {
+    padding: 2em;
+    margin-bottom: 3em;
+  }
   margin-bottom: 2em;
-  ::placeholder {
-    font-weight: 700;
-    font-size: .85em;
-  }  
   .error-message {
     color: $red;
     margin: 0;
@@ -43,7 +43,18 @@ form {
     width: 100%;
     padding: 1em;
     margin: 0.5em 0;
+    font-weight: 600;
+    &:focus {
+      border-color: $blue;
+    }
+    @media #{$large-screens} {
+      padding: 1em 1.5em;
+    }
   }
+  ::placeholder {
+    font-weight: 700;
+    font-size: .85em;
+  }  
   button[type='submit'] {
     width: 100%;
     border: none;

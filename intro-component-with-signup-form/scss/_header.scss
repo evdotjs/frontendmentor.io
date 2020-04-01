@@ -5,8 +5,16 @@ header {
     font-size: 1.7em;
     font-weight: 700;
     line-height: 1.5em;
+    @media #{$large-screens} {
+      font-size: 3em;
+      line-height: unset;
+    }
  }
   p {
     font-weight: 500;
+  }
+  @media #{$large-screens} {
+    margin: auto;
+    text-align: left;
   }
 }

@@ -7,19 +7,21 @@ main, header {
   box-sizing: border-box;
 }
 
-html {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  max-width: 375px;
   min-height: 100vh;
   margin: auto;
   background-color: #ff7a7a;
   background-image: url("../images/bg-intro-mobile.png");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+}
+@media screen and (min-width: 900px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+    background-size: cover;
+  }
 }
 
 .content {
@@ -27,6 +29,21 @@ body {
   margin: auto;
   display: grid;
   grid-auto-flow: row;
+}
+@media screen and (min-width: 600px) {
+  .content {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .content {
+    height: 100vh;
+    max-width: unset;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    grid-gap: 2em;
+    padding: 7% 5%;
+  }
 }
 
 p {
@@ -48,8 +65,20 @@ header h1 {
   font-weight: 700;
   line-height: 1.5em;
 }
+@media screen and (min-width: 900px) {
+  header h1 {
+    font-size: 3em;
+    line-height: unset;
+  }
+}
 header p {
   font-weight: 500;
+}
+@media screen and (min-width: 900px) {
+  header {
+    margin: auto;
+    text-align: left;
+  }
 }
 
 main #try {
@@ -66,9 +95,11 @@ form {
   box-shadow: 0 8px 2px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 2em;
 }
-form ::placeholder {
-  font-weight: 700;
-  font-size: 0.85em;
+@media screen and (min-width: 900px) {
+  form {
+    padding: 2em;
+    margin-bottom: 3em;
+  }
 }
 form .error-message {
   color: #ff7a7a;
@@ -95,6 +126,19 @@ form input {
   width: 100%;
   padding: 1em;
   margin: 0.5em 0;
+  font-weight: 600;
+}
+form input:focus {
+  border-color: #6055a5;
+}
+@media screen and (min-width: 900px) {
+  form input {
+    padding: 1em 1.5em;
+  }
+}
+form ::placeholder {
+  font-weight: 700;
+  font-size: 0.85em;
 }
 form button[type=submit] {
   width: 100%;
@@ -115,11 +159,16 @@ form button[type=submit]:hover {
   cursor: pointer;
 }
 
-.attribution {
+@media screen and (min-width: 900px) {
+  footer {
+    grid-column-end: span 3;
+  }
+}
+footer .attribution {
   font-size: 11px;
   text-align: center;
 }
-.attribution a {
+footer .attribution a {
   color: #6055a5;
 }
 

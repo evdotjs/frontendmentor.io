@@ -3,8 +3,13 @@
 @import 'header';
 @import 'main';
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  a { color: $blue; }
+footer {
+  @media #{$large-screens} {
+    grid-column-end: span 3;
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    a { color: $blue; }
+  }
 }

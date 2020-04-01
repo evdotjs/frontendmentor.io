@@ -6,6 +6,8 @@ $dark-blue: hsl(249, 10%, 26%);
 $grayish-blue: hsl(246, 25%, 77%);
 $white: rgba(255, 255, 255, 0.9);
 
+$medium-screens: 'screen and (min-width: 600px)';
+$large-screens: 'screen and (min-width: 900px)';
 
 // Extends
 %text-properties {
