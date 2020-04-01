@@ -153,7 +153,7 @@ form ::placeholder {
   font-weight: 700;
   font-size: 0.85em;
 }
-form #error-icon {
+form .error-icon {
   background-image: url("../images/icon-error.svg");
   background-size: contain;
   background-position: center;

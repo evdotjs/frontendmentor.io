@@ -23,33 +23,33 @@
     <main>
       <p id="try"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
 
-      <form action="">
+      <form>
         <div class="input-wrapper" v-bind:class="{ 'input-wrapper-error': emptyInputsArray.includes('first') }">
-          <input v-model="inputs.first" type="text" placeholder="First Name">
-          <span v-show="emptyInputsArray.includes('first')" id="error-icon"></span>  
+          <input v-model="inputs.first" type="text" placeholder="First Name" aria-label="first name">
+          <span v-show="emptyInputsArray.includes('first')" class="error-icon"></span>  
         </div>
         <p class="error-message" v-show="emptyInputsArray.includes('first')">First Name cannot be empty</p>
 
         <div class="input-wrapper" v-bind:class="{ 'input-wrapper-error': emptyInputsArray.includes('last') }">
-          <input v-model="inputs.last" type="text" placeholder="Last Name">
-          <span v-show="emptyInputsArray.includes('last')" id="error-icon"></span>
+          <input v-model="inputs.last" type="text" placeholder="Last Name" aria-label="last name">
+          <span v-show="emptyInputsArray.includes('last')" class="error-icon"></span>
         </div>
         <p class="error-message" v-show="emptyInputsArray.includes('last')">Last Name cannot be empty</p>
 
         <div class="input-wrapper" v-bind:class="{ 'input-wrapper-error': emptyInputsArray.includes('email') || !validEmail}">
-          <input v-model="inputs.email" type="email" placeholder="Email Address">
-          <span v-show="emptyInputsArray.includes('email') || !validEmail" id="error-icon"></span>
+          <input v-model="inputs.email" type="email" placeholder="Email Address" aria-label="email address">
+          <span v-show="emptyInputsArray.includes('email') || !validEmail" class="error-icon"></span>
         </div>
         <p class="error-message" v-if="emptyInputsArray.includes('email')">Email cannot be empty</p>
         <p class="error-message" v-else-if="!validEmail">Looks like this is not an email</p>
 
         <div class="input-wrapper" v-bind:class="{ 'input-wrapper-error': emptyInputsArray.includes('password') }">
-          <input v-model="inputs.password" type="password" placeholder="Password">
-          <span v-show="emptyInputsArray.includes('password')" id="error-icon"></span>
+          <input v-model="inputs.password" type="password" placeholder="Password" aria-label="password">
+          <span v-show="emptyInputsArray.includes('password')" class="error-icon"></span>
         </div>
         <p class="error-message" v-show="emptyInputsArray.includes('password')">Password cannot be empty</p>
 
-        <button type="submit" v-on:click="validate">Claim your free trial</button>
+        <button v-on:click="validate" type="submit" aria-label="submit form">Claim your free trial</button>
 
         <p id="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
       </form>
