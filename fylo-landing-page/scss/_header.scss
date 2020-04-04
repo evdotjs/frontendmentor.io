@@ -1,0 +1,31 @@
+header {
+	color: $very-dark-blue;
+	text-align: center;
+	nav{
+		display: inline-flex;
+		width: 100%;
+		font-family: 'Raleway', sans-serif;
+		padding: 1.5em;
+	}
+	#header-logo {
+		width: 25%;
+	}
+	#header-links {
+		display: inline;
+		list-style-type: none;
+		padding: 0;
+		flex-grow: 1;
+		margin: 0;
+		text-align: right;
+		font-size: 0.85em;
+		li { 
+			display: inline; 
+			padding-left: 1em;
+		}
+		a {
+			text-decoration: none;
+			color: inherit;
+			&:hover { border-bottom: 1px solid $very-dark-blue; }
+		}
+	}
+}

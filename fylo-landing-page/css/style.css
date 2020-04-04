@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  max-width: 375px;
+  margin: 0 auto;
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  color: #070439;
+  text-align: center;
+}
+header nav {
+  display: inline-flex;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  padding: 1.5em;
+}
+header #header-logo {
+  width: 25%;
+}
+header #header-links {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1;
+  margin: 0;
+  text-align: right;
+  font-size: 0.85em;
+}
+header #header-links li {
+  display: inline;
+  padding-left: 1em;
+}
+header #header-links a {
+  text-decoration: none;
+  color: inherit;
+}
+header #header-links a:hover {
+  border-bottom: 1px solid #070439;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */

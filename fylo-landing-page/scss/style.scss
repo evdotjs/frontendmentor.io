@@ -1,0 +1,22 @@
+@import "variables";
+
+* {box-sizing: border-box;}
+
+html {
+	background-color: rgba(0,0,0,0.2);
+}
+
+body {
+	max-width: 375px;
+	margin: 0 auto;
+	background-color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+
+@import "header";
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    a { color: hsl(228, 45%, 44%); }
+}
