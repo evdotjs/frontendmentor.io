@@ -1,11 +1,13 @@
 header {
 	color: $very-dark-blue;
 	text-align: center;
+	width: 85%;
+	margin: 0 auto;
 	nav{
 		display: inline-flex;
 		width: 100%;
 		font-family: 'Raleway', sans-serif;
-		padding: 1.5em;
+		padding: 1.5em 0;
 	}
 	#header-logo {
 		width: 25%;
@@ -17,7 +19,7 @@ header {
 		flex-grow: 1;
 		margin: 0;
 		text-align: right;
-		font-size: 0.85em;
+		font-size: 0.8em;
 		li { 
 			display: inline; 
 			padding-left: 1em;
@@ -27,5 +29,43 @@ header {
 			color: inherit;
 			&:hover { border-bottom: 1px solid $very-dark-blue; }
 		}
+	}
+	.illustration {
+		background-image: url('../images/illustration-1.svg');
+		padding: 9em;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 90%;
+		margin: 4em auto 0;
+	}
+	h1 {
+		font-size: 1.5em;
+		margin: 0;
+		line-height: 1.5em;
+	}
+	p {
+		font-size: 0.9em;
+		line-height: 1.5em;
+	}
+	input {
+		width: 100%;
+		margin: 1em 0;
+		padding: 0.65em 1.25em;
+		border-radius: 3px;
+		border: 1px solid $very-dark-blue;
+	}
+	::placeholder {
+		color: $light-grey;
+		font-size: 0.8em;
+	}
+	button {
+		background-color: $bright-blue;
+		color: white;
+		font-weight: bold;
+		width: 100%;
+		padding: 0.8em;
+		border: none;
+		font-size: 0.9em;
+		border-radius: 3px;
 	}
 }

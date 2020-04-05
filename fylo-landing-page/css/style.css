@@ -16,12 +16,14 @@ body {
 header {
   color: #070439;
   text-align: center;
+  width: 85%;
+  margin: 0 auto;
 }
 header nav {
   display: inline-flex;
   width: 100%;
   font-family: "Raleway", sans-serif;
-  padding: 1.5em;
+  padding: 1.5em 0;
 }
 header #header-logo {
   width: 25%;
@@ -33,7 +35,7 @@ header #header-links {
   flex-grow: 1;
   margin: 0;
   text-align: right;
-  font-size: 0.85em;
+  font-size: 0.8em;
 }
 header #header-links li {
   display: inline;
@@ -45,6 +47,44 @@ header #header-links a {
 }
 header #header-links a:hover {
   border-bottom: 1px solid #070439;
+}
+header .illustration {
+  background-image: url("../images/illustration-1.svg");
+  padding: 9em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90%;
+  margin: 4em auto 0;
+}
+header h1 {
+  font-size: 1.5em;
+  margin: 0;
+  line-height: 1.5em;
+}
+header p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+header input {
+  width: 100%;
+  margin: 1em 0;
+  padding: 0.65em 1.25em;
+  border-radius: 3px;
+  border: 1px solid #070439;
+}
+header ::placeholder {
+  color: #bfbfbf;
+  font-size: 0.8em;
+}
+header button {
+  background-color: #3065f8;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.8em;
+  border: none;
+  font-size: 0.9em;
+  border-radius: 3px;
 }
 
 .attribution {
