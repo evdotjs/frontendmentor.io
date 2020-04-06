@@ -20,3 +20,10 @@
 
 - [view in browser](https://evdotjs.github.io/frontendmentor/intro-component-with-signup-form/)
 - [view repository](https://github.com/evdotjs/frontendmentor/tree/gh-pages/intro-component-with-signup-form)
+
+### Fylo landing page
+
+![Design preview for the Fylo landing page coding challenge](fylo-landing-page/design/desktop-preview.jpg)
+
+- [view in browser](https://evdotjs.github.io/frontendmentor/fylo-landing-page/)
+- [view repository](https://github.com/evdotjs/frontendmentor/tree/gh-pages/fylo-landing-page)
