@@ -3,5 +3,20 @@ $very-dark-blue: hsl(243, 87%, 12%);
 $desaturated-blue: hsl(238, 22%, 44%);
 $bright-blue: hsl(224, 93%, 58%);
 $moderate-cyan: rgb(60, 159, 143);
-$light-grayish-blue: hsl(240, 75%, 98%);
+$light-greyish-blue: hsl(240, 75%, 98%);
 $light-grey: hsl(0, 0%, 75%);
+
+// Extends
+
+%illustraion-properties {
+	padding: 9em;
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 90%;
+	margin: 4em auto 0;
+}
+
+%content-wrapper {
+	width: 85%;
+	margin: 0 auto;
+}

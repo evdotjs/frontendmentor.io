@@ -1,8 +1,9 @@
 header {
+	@extend %content-wrapper;
 	color: $very-dark-blue;
 	text-align: center;
-	width: 85%;
 	margin: 0 auto;
+	margin-bottom: 6em;
 	nav{
 		display: inline-flex;
 		width: 100%;
@@ -31,12 +32,8 @@ header {
 		}
 	}
 	.illustration {
+		@extend %illustraion-properties;
 		background-image: url('../images/illustration-1.svg');
-		padding: 9em;
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 90%;
-		margin: 4em auto 0;
 	}
 	h1 {
 		font-size: 1.5em;

@@ -1,3 +1,16 @@
+#stay-productive .illustration, header .illustration {
+  padding: 9em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 90%;
+  margin: 4em auto 0;
+}
+
+#stay-productive .content-wrapper, header {
+  width: 85%;
+  margin: 0 auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,8 +29,8 @@ body {
 header {
   color: #070439;
   text-align: center;
-  width: 85%;
   margin: 0 auto;
+  margin-bottom: 6em;
 }
 header nav {
   display: inline-flex;
@@ -50,11 +63,6 @@ header #header-links a:hover {
 }
 header .illustration {
   background-image: url("../images/illustration-1.svg");
-  padding: 9em;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 90%;
-  margin: 4em auto 0;
 }
 header h1 {
   font-size: 1.5em;
@@ -85,6 +93,21 @@ header button {
   border: none;
   font-size: 0.9em;
   border-radius: 3px;
+}
+
+#stay-productive {
+  background-color: #f6f6fe;
+  border-top-left-radius: 50% 10%;
+  border-top-right-radius: 50% 10%;
+  padding-top: 1em;
+}
+#stay-productive .illustration {
+  background-image: url("../images/illustration-2.svg");
+  margin-bottom: 4em;
+}
+#stay-productive h4 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 .attribution {
