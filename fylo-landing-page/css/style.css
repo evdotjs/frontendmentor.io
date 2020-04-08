@@ -7,7 +7,7 @@
 }
 
 #stay-productive .content-wrapper, header {
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -99,7 +99,7 @@ header button {
   background-color: #f6f6fe;
   border-top-left-radius: 50% 10%;
   border-top-right-radius: 50% 10%;
-  padding-top: 1em;
+  padding: 1em 0 4.5em;
 }
 #stay-productive .illustration {
   background-image: url("../images/illustration-2.svg");
@@ -108,6 +108,36 @@ header button {
 #stay-productive h4 {
   text-align: center;
   font-family: "Raleway", sans-serif;
+}
+#stay-productive p {
+  font-size: 0.9em;
+  color: #4d4d4d;
+  line-height: 1.5em;
+}
+#stay-productive a {
+  color: #3c9f8f;
+  font-size: 0.8em;
+  text-decoration: none;
+  border-bottom: 1px solid #3c9f8f;
+  padding: 0.3em;
+  display: block;
+  width: max-content;
+  margin: 2.5em auto;
+}
+#stay-productive a:hover {
+  border-color: transparent;
+}
+#stay-productive blockquote {
+  background-color: white;
+  padding: 1em 1.5em;
+  margin: 1em;
+}
+#stay-productive blockquote p {
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+#stay-productive blockquote cite {
+  font-size: 0.5em;
 }
 
 .attribution {

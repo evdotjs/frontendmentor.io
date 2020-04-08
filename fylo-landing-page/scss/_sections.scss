@@ -2,7 +2,7 @@
 	background-color: $light-greyish-blue;
 	border-top-left-radius: 50% 10%;
 	border-top-right-radius: 50% 10%;
-	padding-top: 1em;
+	padding: 1em 0 4.5em;
 	.content-wrapper {
 		@extend %content-wrapper;
 	}
@@ -14,5 +14,33 @@
 	h4 {
 		text-align: center;
 		font-family: 'Raleway', sans-serif;
+	}
+	p {
+		font-size: .9em;
+		color: lighten(black, 30%);
+		line-height: 1.5em;
+	}
+	a {
+		color: $moderate-cyan;
+		font-size: .8em;
+		text-decoration: none;
+		border-bottom: 1px solid $moderate-cyan;
+		padding: 0.3em;
+		display: block;
+		width: max-content;
+		margin: 2.5em auto;
+		&:hover { border-color: transparent; }
+	}
+	blockquote {
+		background-color: white;
+		padding: 1em 1.5em;
+		margin: 1em;
+		p {
+			font-size: .75em;
+			line-height: 1.5em;
+		}
+		cite {
+			font-size: .5em;
+		}
 	}
 }
