@@ -17,77 +17,100 @@
   <div>
     <header class="content-wrapper">
       <nav>
-      <img src="images/logo.svg" alt="fylo logo" id="header-logo">
-      <ul id="header-links">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Sign In</a></li>
-      </ul>
-    </nav>
-    <div class="illustration"></div>
-    <h1>All your files in one secure location, accessible anywhere.</h1>
+        <img src="images/logo.svg" alt="fylo logo" id="header-logo">
+        <ul id="header-links">
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Sign In</a></li>
+        </ul>
+      </nav>
+      <div class="illustration"></div>
+      <div class="header-content">
+				<h1 class="heading">All your files in one secure location, accessible anywhere.</h1>
 
-    <p>Fylo stores your most important files in one secure location. 
-    Access them wherever you need, share and collaborate with friends, 
-    family, and co-workers.</p>
-
-    <input type="email" placeholder="Enter your email&hellip;">
-    <button>Get Started</button>
+				<p>Fylo stores your most important files in one secure location. 
+				Access them wherever you need, share and collaborate with friends, 
+				family, and co-workers.</p>
+				<form action="#" class="get-started">
+					<input type="email" placeholder="Enter your email&hellip;">
+					<button>Get Started</button>
+				</form>
+      </div>
     </header>
     
     <section id="stay-productive">
       <div class="content-wrapper">
         <div class="illustration"></div>
-        <h4>Stay productive, wherever you are</h4>
+        <div class="section-content">
+          <h4 class="heading">Stay productive, wherever you are</h4>
         
-        <p>Never let location be an issue when accessing your files. Fylo has you 
-        covered for all of your file storage needs.</p>
+          <p>Never let location be an issue when accessing your files. Fylo has you 
+          covered for all of your file storage needs.</p>
 
-        <p>Securely share files and folders with friends, family and colleagues for 
-        live collaboration. No email attachments required!</p>
+          <p>Securely share files and folders with friends, family and colleagues for 
+          live collaboration. No email attachments required!</p>
 
-        <a href="#">See how Fylo works</a>
+          <a href="#">See how Fylo works</a>
+          
+          <blockquote class="testimonial">
+            <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+            <cite>
+              <img src="images/avatar-testimonial.jpg" alt="kyle burton" class="cite-image">
+              <span class="cite-text">
+                <p class="cite-name">Kyle Burton</p>
+                <p class="cite-title">Founder & CEO, Huddle</p>
+              </span>
+            </cite>
+          </blockquote>
+        </div>
         
-        <blockquote class="testimonial">
-          <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
-          <p>Kyle Burton</p>
-          <cite>Founder & CEO, Huddle</cite>
-        </blockquote>
       </div>
     </section>
 
-    <section>
-      <h2>Get early access today</h2>
+    <section id="early-access">
+      <div>
+        <h3 class="heading">Get early access today</h3>
+        <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+      </div>
+      <form action="#" class="get-started">
+        <input type="email" placeholder="email@example.com">
+        <button>Get Started For Free</button>  
+      </form>
 
-      <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
-
-      <input type="email" placeholder="email@example.com">
-      <button>Get Started For Free</button>    
+        
     </section>
     
 
     <footer>
-      <p>Phone: +1-543-123-4567</p>
-      <p>example@fylo.com</p>
+      <div>
+        <div id="footer-logo"></div>
+        <p id="contact-phone">Phone: +1-543-123-4567</p>
+        <p id="contact-email">example@fylo.com</p>
+      </div>
 
-      <ul>
+      <ul class="footer-links">
         <li><a href="#">About Us</a></li>
         <li><a href="#">Jobs</a></li>
         <li><a href="#">Press</a></li>
         <li><a href="#">Blog</a></li>
       </ul>
 
-      <ul>
+      <ul class="footer-links">
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Terms</a></li>
         <li><a href="#">Privacy</a></li>
       </ul>
 
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
-      </p>
+      <ul class="footer-socials">
+        <li class="social-icon" id="facebook"></li>
+        <li class="social-icon" id="twitter"></li>
+        <li class="social-icon" id="instagram"></li>
+      </ul>
     </footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="http://github.com/evdotjs">Ev McNeal</a>.
+    </p>
   </div>
 </body>
 </html>

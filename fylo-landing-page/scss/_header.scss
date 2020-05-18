@@ -4,14 +4,28 @@ header {
 	text-align: center;
 	margin: 0 auto;
 	margin-bottom: 6em;
-	nav{
+	@media #{$large-screens} {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 3fr;
+		grid-template-areas: "nav nav"
+							 "header-content header-illustration";
+	}
+	nav {
 		display: inline-flex;
 		width: 100%;
 		font-family: 'Raleway', sans-serif;
 		padding: 1.5em 0;
+		grid-area: nav;
+		@media #{$large-screens} {
+			padding: 3em 0 6em;
+		}
 	}
 	#header-logo {
 		width: 25%;
+		@media #{$large-screens} {
+			width: 12%;
+		}
 	}
 	#header-links {
 		display: inline;
@@ -21,9 +35,15 @@ header {
 		margin: 0;
 		text-align: right;
 		font-size: 0.8em;
+		@media #{$large-screens} {
+			font-size: 1em;
+		}
 		li { 
 			display: inline; 
 			padding-left: 1em;
+			@media #{$large-screens} {
+				padding-left: 3em;
+			}
 		}
 		a {
 			text-decoration: none;
@@ -34,15 +54,40 @@ header {
 	.illustration {
 		@extend %illustraion-properties;
 		background-image: url('../images/illustration-1.svg');
+		grid-area: header-illustration;
+		@media #{$large-screens} {
+			margin-top: 0;
+		}
+	}
+	.header-content {
+		grid-area: header-content;
+		@media #{$large-screens} {
+			text-align: left;
+		}
 	}
 	h1 {
 		font-size: 1.5em;
 		margin: 0;
 		line-height: 1.5em;
+		@media #{$large-screens} {
+			font-size: 2.5em;
+			font-family: 'Raleway', sans-serif;
+		}
 	}
 	p {
 		font-size: 0.9em;
 		line-height: 1.5em;
+		@media #{$large-screens} {
+			font-size: 1.15em;
+		}
+	}
+	form {
+		@media #{$large-screens} {
+			display: grid;
+			grid-template-columns: 3fr 2fr;
+			grid-gap: 1em;		
+			width: 85%;
+		}
 	}
 	input {
 		width: 100%;
@@ -50,6 +95,10 @@ header {
 		padding: 0.65em 1.25em;
 		border-radius: 3px;
 		border: 1px solid $very-dark-blue;
+		@media #{$large-screens} {
+			display: inline-flex;
+			margin: 0;
+		}
 	}
 	::placeholder {
 		color: $light-grey;
@@ -64,5 +113,12 @@ header {
 		border: none;
 		font-size: 0.9em;
 		border-radius: 3px;
+		&:hover {
+			background-color: darken($bright-blue, 10%);
+			cursor: pointer;
+		}
+		@media #{$large-screens} {
+			text-align: center;
+		}
 	}
 }

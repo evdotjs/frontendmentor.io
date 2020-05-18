@@ -20,7 +20,6 @@ html {
 }
 
 body {
-  max-width: 375px;
   margin: 0 auto;
   background-color: white;
   font-family: "Open Sans", sans-serif;
@@ -32,14 +31,33 @@ header {
   margin: 0 auto;
   margin-bottom: 6em;
 }
+@media screen and (min-width: 900px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "nav nav" "header-content header-illustration";
+  }
+}
 header nav {
   display: inline-flex;
   width: 100%;
   font-family: "Raleway", sans-serif;
   padding: 1.5em 0;
+  grid-area: nav;
+}
+@media screen and (min-width: 900px) {
+  header nav {
+    padding: 3em 0 6em;
+  }
 }
 header #header-logo {
   width: 25%;
+}
+@media screen and (min-width: 900px) {
+  header #header-logo {
+    width: 12%;
+  }
 }
 header #header-links {
   display: inline;
@@ -50,9 +68,19 @@ header #header-links {
   text-align: right;
   font-size: 0.8em;
 }
+@media screen and (min-width: 900px) {
+  header #header-links {
+    font-size: 1em;
+  }
+}
 header #header-links li {
   display: inline;
   padding-left: 1em;
+}
+@media screen and (min-width: 900px) {
+  header #header-links li {
+    padding-left: 3em;
+  }
 }
 header #header-links a {
   text-decoration: none;
@@ -63,15 +91,48 @@ header #header-links a:hover {
 }
 header .illustration {
   background-image: url("../images/illustration-1.svg");
+  grid-area: header-illustration;
+}
+@media screen and (min-width: 900px) {
+  header .illustration {
+    margin-top: 0;
+  }
+}
+header .header-content {
+  grid-area: header-content;
+}
+@media screen and (min-width: 900px) {
+  header .header-content {
+    text-align: left;
+  }
 }
 header h1 {
   font-size: 1.5em;
   margin: 0;
   line-height: 1.5em;
 }
+@media screen and (min-width: 900px) {
+  header h1 {
+    font-size: 2.5em;
+    font-family: "Raleway", sans-serif;
+  }
+}
 header p {
   font-size: 0.9em;
   line-height: 1.5em;
+}
+@media screen and (min-width: 900px) {
+  header p {
+    font-size: 1.15em;
+  }
+}
+@media screen and (min-width: 900px) {
+  header form {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 1em;
+    width: 85%;
+  }
 }
 header input {
   width: 100%;
@@ -79,6 +140,12 @@ header input {
   padding: 0.65em 1.25em;
   border-radius: 3px;
   border: 1px solid #070439;
+}
+@media screen and (min-width: 900px) {
+  header input {
+    display: inline-flex;
+    margin: 0;
+  }
 }
 header ::placeholder {
   color: #bfbfbf;
@@ -94,58 +161,341 @@ header button {
   font-size: 0.9em;
   border-radius: 3px;
 }
+header button:hover {
+  background-color: #0945ec;
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  header button {
+    text-align: center;
+  }
+}
+
+.get-started {
+  max-width: 450px;
+  margin: auto;
+}
+@media screen and (min-width: 900px) {
+  .get-started {
+    max-width: unset;
+    margin: unset;
+  }
+}
 
 #stay-productive {
-  background-color: #f6f6fe;
-  border-top-left-radius: 50% 10%;
-  border-top-right-radius: 50% 10%;
-  padding: 1em 0 4.5em;
+  background-color: #f8f8fe;
+  padding-bottom: 4.5em;
+}
+#stay-productive::before {
+  content: " ";
+  background-color: white;
+  background-image: url("../images/bg-curve-mobile.svg");
+  display: block;
+  padding: 1em 0;
+}
+@media screen and (min-width: 900px) {
+  #stay-productive::before {
+    background-image: url("../images/bg-curve-desktop.svg");
+    background-size: cover;
+    padding: 2.5em 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  #stay-productive .content-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas: "content illustration";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#stay-productive .section-content {
+  grid-area: content;
+}
+@media screen and (min-width: 900px) {
+  #stay-productive .section-content {
+    text-align: left;
+  }
 }
 #stay-productive .illustration {
   background-image: url("../images/illustration-2.svg");
   margin-bottom: 4em;
+  grid-area: illustration;
 }
 #stay-productive h4 {
   text-align: center;
   font-family: "Raleway", sans-serif;
+}
+@media screen and (min-width: 900px) {
+  #stay-productive h4 {
+    text-align: left;
+  }
 }
 #stay-productive p {
   font-size: 0.9em;
   color: #4d4d4d;
   line-height: 1.5em;
 }
+@media screen and (min-width: 900px) {
+  #stay-productive p {
+    width: 70%;
+  }
+}
 #stay-productive a {
   color: #3c9f8f;
   font-size: 0.8em;
   text-decoration: none;
   border-bottom: 1px solid #3c9f8f;
-  padding: 0.3em;
+  padding: 0.3em 1.5em 0.3em 0.3em;
   display: block;
   width: max-content;
   margin: 2.5em auto;
+  background-image: url("../images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 1.25em;
 }
 #stay-productive a:hover {
   border-color: transparent;
 }
+@media screen and (min-width: 900px) {
+  #stay-productive a {
+    margin: 2.5em 0;
+  }
+}
 #stay-productive blockquote {
   background-color: white;
   padding: 1em 1.5em;
-  margin: 1em;
+  margin: 1em auto;
+  border-radius: 3px;
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
 }
-#stay-productive blockquote p {
-  font-size: 0.75em;
+@media screen and (min-width: 900px) {
+  #stay-productive blockquote {
+    width: 50%;
+    margin: 0;
+  }
+}
+#stay-productive blockquote > p {
+  font-size: 0.7em;
   line-height: 1.5em;
 }
+@media screen and (min-width: 900px) {
+  #stay-productive blockquote > p {
+    font-size: 0.8em;
+  }
+}
+#stay-productive blockquote > p:first-child {
+  background-image: url("../images/icon-quotes.svg");
+  background-repeat: no-repeat;
+  background-size: 1em;
+  padding-top: 2em;
+}
+@media screen and (min-width: 900px) {
+  #stay-productive blockquote > p {
+    width: unset;
+  }
+}
 #stay-productive blockquote cite {
+  font-style: normal;
+  display: inline-flex;
+}
+#stay-productive blockquote cite p {
+  margin: 0;
+}
+#stay-productive blockquote cite .cite-image {
+  width: 15%;
+  border-radius: 50%;
+  margin-right: 0.5em;
+}
+#stay-productive blockquote cite .cite-name {
+  font-size: 0.7em;
+  font-weight: 700;
+}
+@media screen and (min-width: 900px) {
+  #stay-productive blockquote cite .cite-name {
+    font-size: 0.8em;
+  }
+}
+#stay-productive blockquote cite .cite-title {
   font-size: 0.5em;
+}
+@media screen and (min-width: 900px) {
+  #stay-productive blockquote cite .cite-title {
+    font-size: 0.6em;
+  }
+}
+#stay-productive blockquote cite .cite-text {
+  flex: 1;
+}
+
+#early-access {
+  background-color: #585989;
+  color: white;
+  text-align: center;
+  padding: 3em 2.5em;
+}
+@media screen and (min-width: 900px) {
+  #early-access {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15%;
+    text-align: left;
+    padding: 6em 5em;
+  }
+}
+@media screen and (min-width: 900px) {
+  #early-access .heading {
+    margin-top: 0;
+  }
+}
+#early-access p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 900px) {
+  #early-access p {
+    font-size: 1em;
+  }
+}
+#early-access ::placeholder {
+  color: #bfbfbf;
+  font-size: 0.7em;
+}
+#early-access input {
+  width: 80%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 2px;
+  padding: 0.7em 1em;
+}
+@media screen and (min-width: 900px) {
+  #early-access input {
+    padding: 1em;
+  }
+}
+#early-access button {
+  background-color: #3065f8;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 1em;
+  margin: 1em 0;
+  width: 80%;
+  font-size: 0.7em;
+}
+#early-access button:hover {
+  background-color: #0945ec;
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  #early-access button {
+    padding: 1em 1.5em;
+    font-size: 0.9em;
+    width: max-content;
+  }
+}
+
+footer {
+  background-color: #070439;
+  color: white;
+  padding: 3em 3em 1em 3em;
+  font-size: 0.95em;
+}
+@media screen and (min-width: 900px) {
+  footer {
+    padding: 6em 6em 3em 6em;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 3fr;
+  }
+}
+footer #footer-logo {
+  background-image: url("../images/logo-white.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 70%;
+  padding: 2em 4em;
+  margin: 2em 0;
+}
+footer p {
+  margin: 0 0 1.5em 0;
+  padding-left: 2.5em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+footer #contact-phone {
+  background-image: url(../images/icon-phone.svg);
+}
+footer #contact-email {
+  background-image: url(../images/icon-email.svg);
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer .footer-links {
+  margin: 2em 0;
+}
+@media screen and (min-width: 900px) {
+  footer .footer-links {
+    padding-top: 6em;
+  }
+}
+footer .footer-links li {
+  padding-bottom: 1em;
+}
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+footer .footer-socials {
+  width: 100%;
+  margin: 1em auto;
+  display: inline-flex;
+  align-items: center;
+}
+footer .footer-socials .social-icon {
+  padding: 0.8em;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0 0.4em;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+footer .footer-socials #facebook {
+  background-image: url("../images/icon-facebook.svg");
+  margin-left: auto;
+}
+footer .footer-socials #twitter {
+  background-image: url("../images/icon-twitter.svg");
+}
+footer .footer-socials #instagram {
+  background-image: url("../images/icon-instagram.svg");
+  margin-right: auto;
 }
 
 .attribution {
-  font-size: 11px;
+  padding-bottom: 2em;
+  margin: 0;
+  color: white;
+  background-color: #070439;
+  font-size: 0.7em;
   text-align: center;
 }
 .attribution a {
-  color: #3e52a3;
+  color: #585989;
+  margin: 0;
+}
+
+@media screen and (min-width: 900px) {
+  .heading {
+    font-size: 2.5em;
+    font-family: "Raleway", sans-serif;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

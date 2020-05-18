@@ -1,46 +1,196 @@
+.get-started {
+	max-width: 450px;
+	margin: auto;
+	@media #{$large-screens} { 
+		max-width: unset;
+		margin: unset;
+	}
+}
+
 #stay-productive {
 	background-color: $light-greyish-blue;
-	border-top-left-radius: 50% 10%;
-	border-top-right-radius: 50% 10%;
-	padding: 1em 0 4.5em;
+	padding-bottom: 4.5em;
+	&::before {
+		content: ' ';
+		background-color: white;
+		background-image: url('../images/bg-curve-mobile.svg');
+		display: block;
+		padding: 1em 0;
+		@media #{$large-screens} {
+			background-image: url('../images/bg-curve-desktop.svg');
+			background-size: cover;
+			padding: 2.5em 0;
+		}
+	}
 	.content-wrapper {
 		@extend %content-wrapper;
+		@media #{$large-screens} {
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-areas: "content illustration";
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	.section-content {
+		grid-area: content;
+		@media #{$large-screens} {
+			text-align: left;
+		}
 	}
 	.illustration {
 		@extend %illustraion-properties;
 		background-image: url('../images/illustration-2.svg');
 		margin-bottom: 4em;
+		grid-area: illustration;
 	}
 	h4 {
 		text-align: center;
 		font-family: 'Raleway', sans-serif;
+		@media #{$large-screens} {
+			text-align: left;
+		}
 	}
 	p {
 		font-size: .9em;
 		color: lighten(black, 30%);
 		line-height: 1.5em;
+		@media #{$large-screens} {
+			width: 70%;
+		}
 	}
 	a {
 		color: $moderate-cyan;
 		font-size: .8em;
 		text-decoration: none;
 		border-bottom: 1px solid $moderate-cyan;
-		padding: 0.3em;
+		padding: 0.3em 1.5em 0.3em 0.3em;
 		display: block;
 		width: max-content;
 		margin: 2.5em auto;
+		background-image: url('../images/icon-arrow.svg');
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: 1.25em;
 		&:hover { border-color: transparent; }
+		@media #{$large-screens} {
+			margin: 2.5em 0;
+		}
 	}
 	blockquote {
 		background-color: white;
 		padding: 1em 1.5em;
-		margin: 1em;
-		p {
-			font-size: .75em;
+		margin: 1em auto;
+		border-radius: 3px;
+		box-shadow: 0 0 12px -2px rgba(0, 0, -0, 0.1);
+		max-width: 350px;
+		@media #{$large-screens} {
+			width: 50%;
+			margin: 0;
+		}
+		>p {
+			font-size: .7em;
 			line-height: 1.5em;
+			@media #{$large-screens} {
+				font-size: .8em;
+			}
+			&:first-child {
+				background-image: url('../images/icon-quotes.svg');
+				background-repeat: no-repeat;
+				background-size: 1em;
+				padding-top: 2em;
+			}
+			@media #{$large-screens} {
+				width: unset;
+			}
 		}
 		cite {
-			font-size: .5em;
+			font-style: normal;
+			display: inline-flex;
+			p { 
+				margin: 0; 
+			}
+			.cite-image { 
+				width: 15%;
+				border-radius: 50%;
+				margin-right: .5em;
+			}
+			.cite-name {
+				font-size: 0.7em;
+				font-weight: 700;
+				@media #{$large-screens} {
+					font-size: .8em;
+				}
+			}
+			.cite-title {
+				font-size: 0.5em;
+				@media #{$large-screens} {
+					font-size: .6em;
+				}
+			}
+			.cite-text {
+				flex: 1;
+			}
+		}
+	}
+}
+
+#early-access {
+	background-color: $desaturated-blue;
+	color: white;
+	text-align: center;
+	padding: 3em 2.5em;
+	@media #{$large-screens} {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 15%;
+		text-align: left;
+		padding: 6em 5em;
+	}
+	.heading {
+		@media #{$large-screens} {
+			margin-top: 0;
+		}
+	}
+	p {
+		font-size: .9em;
+		line-height: 1.5em;
+		@media #{$large-screens} {
+			font-size: 1em;
+		}
+	}
+	::placeholder {
+		color: $light-grey;
+		font-size: .7em;
+	}
+	input {
+		width: 80%;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+		border: none;
+		border-radius: 2px;
+		padding: .7em 1em;
+		@media #{$large-screens} {
+			padding: 1em;
+		}
+
+	}
+
+	button {
+		background-color: $bright-blue;
+		color: white;
+		border: none;
+		border-radius: 2px;
+		padding: 1em;
+		margin: 1em 0;
+		width: 80%;
+		font-size: .7em;
+		&:hover {
+			background-color: darken($bright-blue, 10%);
+			cursor: pointer
+		}
+		@media #{$large-screens} {
+			padding: 1em 1.5em;
+			font-size: .9em;
+			width: max-content;
 		}
 	}
 }
