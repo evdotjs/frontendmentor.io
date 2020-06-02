@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  background-image: url(../design/mobile-design.jpg);
+  background-repeat: no-repeat;
+  background-size: 375px;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif; }
+
+body {
+  background-color: #e5eff5;
+  padding: 4.5em 2em;
+  width: 375px;
+  margin: 0 auto;
+  color: #fbfbfb;
+  opacity: 0.7; }
+
+section {
+  padding: 1.7em 1.5em; }
+
+.heading {
+  padding: 0;
+  margin: 0; }
+
+#join {
+  background-color: #fbfbfb;
+  border-radius: 5px 5px 0 0; }
+  #join .heading {
+    color: #2ab2af; }
+  #join h4 {
+    padding: 0;
+    margin: 1.5em 0; }
+  #join .subheading {
+    color: #c0df34; }
+  #join p {
+    line-height: 2em;
+    font-size: .8em;
+    font-weight: bold;
+    color: #98a6bd;
+    opacity: 0.8;
+    margin: 0.5em 0; }
+
+#subscription {
+  background-color: #2ab2af; }
+  #subscription .price {
+    display: inline-flex;
+    margin-top: 1em; }
+    #subscription .price em {
+      font-size: 2em;
+      font-weight: bold;
+      font-style: normal; }
+    #subscription .price p {
+      margin: 0 0 0 .75em;
+      align-self: center;
+      opacity: 0.6; }
+  #subscription > p {
+    margin-top: 0; }
+  #subscription button {
+    background-color: #c0df34;
+    color: #fbfbfb;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    margin-top: 1em; }
+    #subscription button:hover {
+      cursor: pointer; }
+
+#why-us {
+  background-color: #2fc6c4;
+  border-radius: 0 0 5px 5px; }
+  #why-us ul {
+    padding: 0;
+    margin-bottom: 0; }
+  #why-us li {
+    list-style-type: none;
+    opacity: 0.8;
+    font-size: 0.9em;
+    margin-bottom: .25em; }
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #2ab2af; }
+
+.attribution a {
+  color: #2ab2af; }
