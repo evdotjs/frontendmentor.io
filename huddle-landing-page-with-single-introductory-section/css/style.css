@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../images/bg-mobile.svg");
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #674baf;
+  color: white;
+  text-align: center;
+  padding: 2em;
+}
+@media screen and (min-width: 900px) {
+  body {
+    max-width: 1440px;
+    background-image: url("../images/bg-desktop.svg");
+    text-align: unset;
+    padding: 3.5em 4.5em;
+  }
+}
+body header {
+  width: 100%;
+  display: inline-flex;
+}
+body .logo {
+  width: 42%;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 900px) {
+  body .logo {
+    width: 16%;
+  }
+}
+body .heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  margin: 1em 0 0.5em;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 900px) {
+  body .heading {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 900px) {
+  body main {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    margin: 4.5em 0 0;
+    grid-gap: 3em;
+  }
+}
+body main img {
+  max-width: 100%;
+  padding: 0 0.3em;
+  margin: 2.5em 0;
+}
+@media screen and (min-width: 900px) {
+  body main img {
+    padding: 0;
+    margin: 0;
+  }
+}
+body main p {
+  line-height: 1.4em;
+  padding: 0 0.3em;
+}
+@media screen and (min-width: 900px) {
+  body main p {
+    padding: 0;
+    font-size: 1.15em;
+  }
+}
+body button {
+  padding: 1em;
+  border: none;
+  border-radius: 25px;
+  width: 65%;
+  margin: 1em 0;
+  color: #674baf;
+  background-color: white;
+  font-size: 0.8em;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 3px 6px 2px rgba(0, 0, 0, 0.15);
+  transition-property: box-shadow;
+  transition-duration: 200ms;
+}
+body button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.45);
+}
+@media screen and (min-width: 900px) {
+  body button {
+    border-radius: 35px;
+    width: 40%;
+    font-size: 1.15em;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  footer {
+    display: grid;
+    margin-top: 1.5em;
+  }
+}
+footer .social-links {
+  list-style: none;
+  display: inline-flex;
+  padding: 0;
+  margin: 3.5em 0 0;
+}
+@media screen and (min-width: 900px) {
+  footer .social-links {
+    margin: 0;
+    justify-self: end;
+  }
+}
+footer .social-links li {
+  padding: 0.8em;
+  margin: 0 0.3em;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+}
+footer .social-links li:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  footer .social-links li {
+    padding: 1.2em;
+    margin: 0 0.5em;
+  }
+}
+footer .social-links #icon-fb {
+  background-image: url("../images/icon-fb.svg");
+}
+footer .social-links #icon-tw {
+  background-image: url("../images/icon-tw.svg");
+}
+footer .social-links #icon-ig {
+  background-image: url("../images/icon-ig.svg");
+}
+footer .attribution {
+  font-size: 0.7em;
+  margin-top: 2em;
+}
+@media screen and (min-width: 900px) {
+  footer .attribution {
+    justify-self: center;
+    margin: 0;
+  }
+}
+footer .attribution a {
+  color: #b1a2d7;
+}
+
+/*# sourceMappingURL=style.css.map */
