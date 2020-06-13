@@ -27,3 +27,17 @@
 
 - [view in browser](https://evdotjs.github.io/frontendmentor/fylo-landing-page/)
 - [view repository](https://github.com/evdotjs/frontendmentor/tree/gh-pages/fylo-landing-page)
+
+### Single price grid component
+
+![Design preview for the Fylo landing page coding challenge](single-price-grid-component/design/desktop-preview.jpg)
+
+- [view in browser](https://evdotjs.github.io/frontendmentor/single-price-grid-component/)
+- [view repository](https://github.com/evdotjs/frontendmentor/tree/gh-pages/single-price-grid-component)
+
+### Huddle landing page with a single introductory section
+
+![Design preview for the Fylo landing page coding challenge](huddle-landing-page-with-single-introductory-section/design/desktop-preview.jpg)
+
+- [view in browser](https://evdotjs.github.io/frontendmentor/huddle-landing-page-with-single-introductory-section/)
+- [view repository](https://github.com/evdotjs/frontendmentor/tree/gh-pages/huddle-landing-page-with-single-introductory-section)
