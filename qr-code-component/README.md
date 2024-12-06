@@ -15,7 +15,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Links
 
-- Live Site URL:
+- [Live Site URL](https://evdotjs.github.io/frontendmentor/qr-code-component/)
 
 ### Built with
 
