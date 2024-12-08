@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://evdotjs.github.io/frontendmentor/qr-code-component/)
+- [Live Site URL](https://evdotjs.github.io/frontendmentor/blog-preview-card/)
 
 ### Built with
 

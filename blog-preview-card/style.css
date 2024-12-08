@@ -31,7 +31,7 @@ body {
 
 .blog_card {
   background-color: var(--color-white);
-  border: 2px solid var(--color-gray-950);
+  border: 1px solid var(--color-gray-950);
   border-radius: 3%;
   display: grid;
   grid-auto-flow: row;
