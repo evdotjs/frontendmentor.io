@@ -1,0 +1,218 @@
+/* custom properties  */
+:root {
+  --color-blue: #345ff6;
+  --color-gunmetal: #253347;
+  --color-dark-electric-blue: #5e6e85;
+  --color-pure-white: #fff;
+  --gradient-1: linear-gradient(to left top, #d6e6fe, transparent);
+  --gradient-2: linear-gradient(to bottom right, transparent, #d6fcfe);
+
+  --border-radius: 1.6rem;
+}
+
+/* custom font  */
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+/* reset  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 62.5%; /* 1rem = 10px  */
+}
+
+body {
+  color: var(--color-dark-electric-blue);
+  display: grid;
+  font-family: 'Inter';
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 2.4rem;
+}
+
+.heading {
+  color: var(--color-gunmetal);
+  font-weight: 600;
+}
+.heading-xl {
+  font-size: 4.8rem;
+  letter-spacing: -2px;
+}
+.heading-l {
+  font-size: 3.2rem;
+}
+.heading-m {
+  font-size: 2.4rem;
+}
+.heading-s {
+  font-size: 2rem;
+}
+.body-m {
+  font-size: 1.6rem;
+
+  line-height: 150%;
+}
+
+.hero {
+  display: grid;
+  background: var(--gradient-1), var(--gradient-2);
+  background-size: 100% 60%;
+  background-repeat: no-repeat;
+  gap: 2.4rem;
+}
+
+.hero .intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.hero .intro .logo {
+  width: 4rem;
+}
+
+.hero .details {
+  display: grid;
+  padding: 2rem;
+  gap: 2.4rem;
+  background-color: var(--color-pure-white);
+  border-radius: var(--border-radius);
+  box-shadow: 0 1rem 1.5rem 0.2rem rgba(0, 0, 0, 0.05);
+}
+
+form {
+  display: grid;
+  gap: 2.4rem;
+  font-size: 1.4rem;
+}
+
+.unit-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.unit-select label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+/* custom radio buttons */
+input[type='radio'] {
+  appearance: none;
+  border: 1px solid var(--color-dark-electric-blue);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+input[type='radio']:checked {
+  background-color: var(--color-blue);
+  border: 8px solid #e0e7ff;
+}
+
+.unit-inputs {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.unit-inputs label {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.unit-inputs input {
+  font-family: 'Inter';
+  color: var(--color-gunmetal);
+  font-size: 2.4rem;
+  font-weight: 600;
+  border: none;
+}
+
+/* border around the input and units */
+.unit-input {
+  border: 1px solid var(--color-dark-electric-blue);
+  padding: 2rem 2.4rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* style the units after the input number*/
+.unit-input span {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-blue);
+}
+
+/* remove arrows from input (chrome) */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+/* remove arrows from input (firefox) */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.unit-input-ft-in {
+  display: flex;
+  justify-content: space-between;
+}
+
+.unit-input-ft-in div {
+  flex-basis: 47%;
+}
+
+#metric-inputs {
+  /* display: none; */
+}
+
+#imperial-inputs {
+  display: none;
+}
+
+.hero .bmi-result {
+  background-color: #345ff6;
+  border-radius: var(--border-radius);
+  color: var(--color-pure-white);
+  padding: 3.2rem;
+}
+
+.bmi-score {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/*****
+MEDIA QUERIES  
+*****/
+
+/* desktop */
+@media screen and (min-width: 960px) {
+  .heading-xl {
+    /* font-size: 6.4rem; */
+  }
+
+  .heading-l {
+    /* font-size: 4.8rem; */
+  }
+}

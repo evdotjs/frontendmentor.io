@@ -29,6 +29,9 @@ Users should be able to:
 ## My process
 
 - My plan is to complete this challenge twice: first, using vanilla HTML/CSS/JavaScript and second, using React/SASS.
+- I started off by analyzing the design file in figma, seeing how the information was organized, then marking up the information using semantic HTML tags.
+- After that I decided work on the CSS one section at a time, starting with the hero section.
+- Next in javascript I added the ability to toggle between imperial and metric units in the HTML form.
 
 ### Built with
 
