@@ -6,6 +6,7 @@ This is a solution to the [Body Mass Index Calculator challenge on Frontend Ment
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Preview](#preview)
   - [Links](#links)
 - [My process](#my-process)
 - [Author](#author)
@@ -21,6 +22,10 @@ Users should be able to:
 - See their BMI result, with their weight classification and healthy weight range
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
+
+### Preview
+
+![preview](./preview.jpg)
 
 ### Links
 
