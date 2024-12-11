@@ -35,11 +35,12 @@ body {
   font-family: 'Inter';
   max-width: 375px;
   margin: 0 auto;
+  gap: 4.8rem;
 }
 
-section {
+/* section {
   padding: 2.4rem;
-}
+} */
 
 .heading {
   color: var(--color-gunmetal);
@@ -66,13 +67,15 @@ section {
 
 .hero {
   display: grid;
-  background: var(--gradient-1), var(--gradient-2);
-  background-size: 100% 60%;
-  background-repeat: no-repeat;
   gap: 2.4rem;
 }
 
 .hero .intro {
+  background: var(--gradient-1), var(--gradient-2);
+  background-repeat: no-repeat;
+  border-radius: 0 0 2.4rem 2.4rem;
+  height: 150%;
+  padding: 2.4rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -85,12 +88,13 @@ section {
 }
 
 .hero .details {
+  margin: 0 2.4rem;
   display: grid;
   padding: 2rem;
   gap: 2.4rem;
   background-color: var(--color-pure-white);
   border-radius: var(--border-radius);
-  box-shadow: 0 1rem 1.5rem 0.2rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0rem 1rem 3rem 0rem rgba(143, 174, 207, 0.25);
 }
 
 form {
@@ -127,6 +131,15 @@ input[type='radio']:checked {
   border: 8px solid #e0e7ff;
 }
 
+input[type='radio']:active {
+  border: 1px solid var(--color-blue);
+}
+
+input[type='radio']:hover,
+.unit-inputs input:hover {
+  cursor: pointer;
+}
+
 .unit-inputs {
   display: grid;
   gap: 2.4rem;
@@ -143,6 +156,7 @@ input[type='radio']:checked {
   font-size: 2.4rem;
   font-weight: 600;
   border: none;
+  width: 80%;
 }
 
 /* border around the input and units */
@@ -152,6 +166,10 @@ input[type='radio']:checked {
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
+}
+
+.unit-input:focus-within {
+  border: 1px solid var(--color-blue);
 }
 
 /* style the units after the input number*/
@@ -170,6 +188,12 @@ input[type='number']::-webkit-outer-spin-button {
 /* remove arrows from input (firefox) */
 input[type='number'] {
   -moz-appearance: textfield;
+}
+
+/* remove the inner border when an input is selected */
+input:focus {
+  outline: none;
+  border: none;
 }
 
 .unit-input-ft-in {
@@ -200,6 +224,91 @@ input[type='number'] {
   display: block;
   font-weight: 600;
   margin-bottom: 2rem;
+}
+
+/***** result section  *****/
+
+.result {
+  display: grid;
+  gap: 2.4rem;
+}
+
+.result-image img {
+  width: 100%;
+}
+
+.result-text {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/***** tips section  *****/
+
+.tips {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), var(--gradient-1), var(--gradient-2);
+  padding: 2.4rem;
+  display: grid;
+  gap: 4rem;
+}
+
+.tip-card {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.tip-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/***** limitations section  *****/
+.limitations {
+  padding: 2.4rem;
+  display: grid;
+  gap: 5.6rem;
+}
+
+.limitations-intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.limitations-list {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.limitations-card {
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+  box-shadow: 1rem 1rem 3rem 0rem rgba(143, 174, 207, 0.25);
+}
+
+.limitations-card h4::before {
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+#limitation-gender::before {
+  content: url('./assets/images/icon-gender.svg');
+}
+#limitation-age::before {
+  content: url('./assets/images/icon-age.svg');
+}
+#limitation-muscle::before {
+  content: url('./assets/images/icon-muscle.svg');
+}
+#limitation-pregnancy::before {
+  content: url('./assets/images/icon-pregnancy.svg');
+}
+#limitation-race::before {
+  content: url('./assets/images/icon-race.svg');
 }
 
 /*****
