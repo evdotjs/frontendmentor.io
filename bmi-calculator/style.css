@@ -348,8 +348,10 @@ MEDIA QUERIES
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .bmi-result {
+  .hero .bmi-result {
     grid-template-columns: repeat(2, 1fr);
+    border-bottom-right-radius: 10rem;
+    border-top-right-radius: 10rem;
   }
 
   .result {

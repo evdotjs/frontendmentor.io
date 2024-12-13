@@ -2,12 +2,25 @@ const units = document.getElementsByName('units');
 const [metric, imperial] = units;
 const metricInputs = document.getElementById('metric-inputs');
 const imperialInputs = document.getElementById('imperial-inputs');
-const values = {
+const bmiScore = document.querySelector('.bmi-score');
+const bmiValues = {
   heightCm: 0,
   weightKg: 0,
   heightFt: 0,
   heightIn: 0,
   weightLbs: 0,
+  calculateMetric() {
+    if (this.weightKg && this.heightCm) {
+      return this.weightKg / (this.heightCm / 100) ** 2;
+    }
+    return 0;
+  },
+  calculateImperial() {
+    if (this.weightLbs && this.heightFt) {
+      return 703 * (this.weightLbs / (this.heightFt + this.heightIn) ** 2);
+    }
+    return 0;
+  },
 };
 
 // display metric units when radio button is clicked
@@ -26,30 +39,36 @@ imperial.addEventListener('change', (event) => {
   }
 });
 
-// update values{} whenever user changes a metric value
+// update bmiValues{} whenever user changes a metric value
 metricInputs.addEventListener('change', (event) => {
   let newValue = parseInt(event.target.value);
   if (newValue) {
     if (event.target.name == 'height-cm') {
-      values.heightCm = newValue;
+      bmiValues.heightCm = newValue;
     } else {
-      values.weightKg = newValue;
+      bmiValues.weightKg = newValue;
     }
   }
-  console.log(values);
+
+  if (bmiValues.calculateMetric() > 0) {
+    bmiScore.innerText = bmiValues.calculateMetric().toFixed(1);
+  }
 });
 
-// update values{} whenever user changes an imperial value
+// update bmiValues{} whenever user changes an imperial value
 imperialInputs.addEventListener('change', (event) => {
   let newValue = parseInt(event.target.value);
-  if (newValue) {
+  if (newValue >= 0) {
     if (event.target.name == 'height-ft') {
-      values.heightFt = newValue;
+      bmiValues.heightFt = newValue * 12;
     } else if (event.target.name == 'height-in') {
-      values.heightIn = newValue;
+      bmiValues.heightIn = newValue;
     } else {
-      values.weightLbs = newValue;
+      bmiValues.weightLbs = newValue;
     }
   }
-  console.log(values);
+
+  if (bmiValues.calculateImperial() > 0) {
+    bmiScore.innerText = bmiValues.calculateImperial().toFixed(1);
+  }
 });
