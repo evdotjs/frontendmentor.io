@@ -59,7 +59,10 @@ body {
 }
 .body-m {
   font-size: 1.6rem;
-
+  line-height: 150%;
+}
+.body-s {
+  font-size: 1.4rem;
   line-height: 150%;
 }
 
@@ -211,7 +214,7 @@ input:focus {
   display: none;
 }
 
-.hero .bmi-result {
+.hero-message {
   display: grid;
   grid-auto-flow: row;
   gap: 1.6rem;
@@ -219,6 +222,10 @@ input:focus {
   border-radius: var(--border-radius);
   color: var(--color-pure-white);
   padding: 3.2rem;
+}
+
+.bmi-result {
+  display: none;
 }
 
 .bmi-score {
@@ -348,10 +355,13 @@ MEDIA QUERIES
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero .bmi-result {
-    grid-template-columns: repeat(2, 1fr);
+  .hero-message {
     border-bottom-right-radius: 10rem;
     border-top-right-radius: 10rem;
+  }
+
+  .bmi-result {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .result {
